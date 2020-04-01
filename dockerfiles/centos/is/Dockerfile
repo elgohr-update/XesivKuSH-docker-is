@@ -53,7 +53,7 @@ RUN \
     && echo ${MOTD} > /etc/profile.d/motd.sh
 
 # copy init script to user home
-COPY --chown=wso2carbon:wso2 docker-entrypoint.sh ${USER_HOME}/
+COPY --chown=wso2carbon:wso2 dockerfiles/centos/is/docker-entrypoint.sh ${USER_HOME}/
 # install required packages
 RUN \
     yum -y update \
